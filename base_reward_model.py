@@ -25,26 +25,26 @@ import numpy as np
 ## SOAR PARAMETERS
 ESTIMATED_MARKET_CAP = 500_000_000 # $500.000.000
 MAX_SUPPLY = 100_000_000;
-CIRRCULATING_SUPPLY = MAX_SUPPLY / 2;
+CIRRCULATING_SUPPLY = MAX_SUPPLY / 2;   # assumption
 
-ESTIMATED_PRICE = ESTIMATED_MARKET_CAP / CIRRCULATING_SUPPLY # $5 per SOAR coin
+ESTIMATED_PRICE = ESTIMATED_MARKET_CAP / CIRRCULATING_SUPPLY
 
 # CIRRCULATING_SUPPLY = ESTIMATED_MARKET_CAP / ESTIMATED_PRICE;
 
-TOTAL_STAKED_SUPPLY = CIRRCULATING_SUPPLY * 0.2;     # ETH: 14602000;
-DEPOSIT_REQ = 3000;                                  # $30.000 cost for being a validator
+TOTAL_STAKED_SUPPLY = CIRRCULATING_SUPPLY * 0.2;     # assumption
+DEPOSIT_REQ = 3000;                                  # assumption - avg $30.000 cost for being a validator
 VALIDATOR_COUNT = TOTAL_STAKED_SUPPLY/DEPOSIT_REQ;
 
-SECONDS_PER_EPOCH = 300;              # ETH: 384;
+SECONDS_PER_EPOCH = 300;              # assumption
 EPOCHS_PER_YEAR = 31556926 / SECONDS_PER_EPOCH;
-BASE_REWARD_FACTOR = 50               # ETH: 64;
-BASE_REWARDS_PER_EPOCH = 4;
+BASE_REWARD_FACTOR = 50               # assumption
+BASE_REWARDS_PER_EPOCH = 4;           # assumption
 
 SQRT_GWEI = 31622;
 GWEI = 10**9;
 # Protocol:
-BASE_REWARDS_PROPOTIONAL_TO_VALIDATORS_ONLINE = 3
-AVRG_ONLINE = 0.98
+BASE_REWARDS_PROPOTIONAL_TO_VALIDATORS_ONLINE = 3   # assumption
+AVRG_ONLINE = 0.98                                  # assumption
 
 # Vitalik's formula
 def calc_annual_reward(total_staked):
